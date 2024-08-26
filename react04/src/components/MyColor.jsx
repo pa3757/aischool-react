@@ -11,7 +11,7 @@ const MyColor = () => {
     display: "inline-block",
   };
   return (
-    <div>
+    <div> 
       {colorArray.map((color, index) => {
         return (
           <div
