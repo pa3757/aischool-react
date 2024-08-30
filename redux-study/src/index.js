@@ -4,14 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// 구조분해할당을 통해 App 컴포넌트에 변수 전달
-let { name, age } = { name: "홍길동", age: 25 };
+// redux 적용을 위한 Provider, store import
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div>
-    <App name={name} age={age} />
-  </div>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
